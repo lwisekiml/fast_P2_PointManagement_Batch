@@ -27,6 +27,7 @@ public class PointReservation extends IdEntity {
     @Column(name = "available_days", nullable = false)
     int availableDays;
     // 실행여부
+    @Setter
     @Column(name = "is_executed", columnDefinition = "TINYINT", length = 1, nullable = false)
     boolean executed;
 
