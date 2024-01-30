@@ -10,10 +10,10 @@
 
 ### Docker MySQL RUN
 
-docker run : 도커 컨테이너 실행
--p 33060:3306 : 포트 파인딩 컨테이너 내부의 3306포트를 외부의 33060와 연결한다.
---name : 컨테이너 이름
--e : 컨테이너의 환경변수 지정 (MYSQL_ROOT_PASSWORD=password 을 통해 password를 password로 지정함)
+docker run : 도커 컨테이너 실행  
+-p 33060:3306 : 포트 파인딩 컨테이너 내부의 3306포트를 외부의 33060와 연결한다.  
+--name : 컨테이너 이름  
+-e : 컨테이너의 환경변수 지정 (MYSQL_ROOT_PASSWORD=password 을 통해 password를 password로 지정함)  
 -d : 컨테이너 실행은 백그라운드에서 진행
 
 > docker run -p 33070:3307 --name point-mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0.26
@@ -31,7 +31,7 @@ docker run : 도커 컨테이너 실행
 
 - 컴테이너 bash 실행
 
-> docker exec -i -t 690aa0e85f88 /bin/bash
+> docker exec -i -t < CONTAINER ID > /bin/bash
 
 - mysql 실행(password를 물어보면 'password' 입력)
 
