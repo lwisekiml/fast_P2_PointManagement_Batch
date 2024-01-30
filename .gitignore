@@ -4,6 +4,7 @@
 ### Gradle ###
 .gradle
 build/
+src/main/generated
 out/
 src/main/resources/static/.DS_Store
 .DS_Store
