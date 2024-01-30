@@ -1,9 +1,6 @@
 package me.wisekim.fcp.point.wallet;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import me.wisekim.fcp.point.IdEntity;
 
 import javax.persistence.Column;
@@ -19,6 +16,7 @@ import java.math.BigInteger;
 public class PointWallet extends IdEntity {
     @Column(name = "user_id", unique = true, nullable = false) // user_id라는 이름의 컬럼과 매핑. unique하고 null이면 안됨
     String userId;
+    @Setter
     @Column(name = "amount", columnDefinition = "BIGINT") // amount라는 이름의 컬럼과 매핑합니다. 그 타입은 BIGINT 이다.
     BigInteger amount;
 }
