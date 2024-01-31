@@ -65,3 +65,4 @@ docker run : 도커 컨테이너 실행
 
 - 이미지 삭제
 > docker rmi < image Id >
+
