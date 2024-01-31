@@ -14,4 +14,6 @@ public interface PointCustomRepository {
      * @return PExpiredPoint의 Page 결과
      */
     Page<ExpiredPointSummary> sumByExpiredDate(LocalDate alarmCriteriaDate, Pageable pageable);
+
+    Page<ExpiredPointSummary> sumBeforeExpireDate(LocalDate alarmCriteriaDate, Pageable pageable);
 }

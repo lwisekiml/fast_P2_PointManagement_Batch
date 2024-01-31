@@ -15,14 +15,14 @@ public class InputExpireSoonPointAlarmCriteriaDateStepListener implements StepEx
     @Override
     public void beforeStep(StepExecution stepExecution) {
         // today jobParamater를 가져옵니다.
-        // today - 1 한 다음에 그걸  alarmCriteriaDate라는 이름으로 StepExectuionContext에 넣습니다.
+        // today + 7 한 다음에 그걸  alarmCriteriaDate라는 이름으로 StepExectuionContext에 넣습니다.
         JobParameter todayParameter = stepExecution.getJobParameters().getParameters().get("today");
         if (todayParameter == null) {
             return;
         }
         LocalDate today = LocalDate.parse((String) todayParameter.getValue());
         ExecutionContext context = stepExecution.getExecutionContext();
-        context.put("alarmCriteriaDate", today.plusDays(7).format(DateTimeFormatter.ISO_DATE));
+        context.put("alarmCriteriaDate", today.plusDays(7).format(DateTimeFormatter.ISO_DATE)); // 1 -> 7 이였음
         stepExecution.setExecutionContext(context);
     }
 
