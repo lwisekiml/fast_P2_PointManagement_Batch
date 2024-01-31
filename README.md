@@ -29,7 +29,7 @@ docker run : 도커 컨테이너 실행
 
 ### Docker MySQL 접속해보기
 
-- 컴테이너 bash 실행
+- 컨테이너 bash 실행
 
 > docker exec -i -t < CONTAINER ID > /bin/bash
 
